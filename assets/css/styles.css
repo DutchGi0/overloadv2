@@ -1,0 +1,154 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.date {
+    font-size: 1.2rem;
+    color: #15bbdc;
+}
+
+.home-item,
+.news-article{
+    background: #222222;
+    padding: 10px;
+    margin-bottom: 1.25rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ddd;
+}
+.news-article{
+    line-height: 2;
+}
+
+.title {
+    color: #15bbdc;
+
+}
+
+.category {
+    background: #222222;
+    padding: 10px;
+    margin-bottom: 1.25rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.home-item h2 .text-primary {
+    text-shadow: 0 0 5px #ddd;
+}
+
+.home-item .btn {
+    box-shadow: 0 0 5px #ddd;
+}
+
+.navbar,
+.dropdown-menu{
+    background: #222222 url('../images/nav.png') repeat;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.navbar .navbar-nav > li > a,
+.dropdown-menu > li > a {
+    color: #faf4ec;
+    font-family: 'Open Sans',sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 700;
+    display: table-cell;
+    text-shadow: 0 0 10px rgba(16, 12, 9, 1);
+}
+
+.dropdown-menu > li > a:hover {
+    background: transparent;
+    text-decoration: none;
+    text-shadow: 0 0 20px #fff;
+}
+.shown {
+    display: block;
+}
+
+.card {
+    background: #222222;
+    padding: 10px;
+    margin-bottom: 1.25rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.navbar .navbar-nav > li > a:hover {
+    text-decoration: none;
+    text-shadow: 0 0 10px #15bbdc;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 50px; /* Place the button at the bottom of the page */
+    right: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #222222; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    box-shadow: 0 0 5px #ddd;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+footer{
+    background: #222222;
+    padding-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ddd;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 1;
+}
+
+@media (max-width: 480px) {
+    .home-item > h3 {
+        font-size: 1rem;
+        text-align: left;
+    }
+    .login {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shown {
+        display: none;
+    }
+
+}
+
+@media (max-width: 770px) {
+    .home-item > h3 {
+        font-size: 1rem;
+        text-align: left;
+    }
+    .login {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .shown {
+        display: none;
+    }
+}
