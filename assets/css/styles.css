@@ -4,6 +4,10 @@ html {
 }
 body {
     margin-bottom: 60px;
+    background-image: url("../images/Overload-BG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .uppercase {
     text-transform: uppercase;
@@ -90,11 +94,28 @@ body {
     text-shadow: 0 0 10px #15bbdc;
 }
 
-#myBtn {
+#myBtn{
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
     bottom: 50px; /* Place the button at the bottom of the page */
     right: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #222222; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    box-shadow: 0 0 5px #ddd;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#btACP {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 50px; /* Place the button at the bottom of the page */
+    left: 10px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
@@ -121,6 +142,13 @@ footer{
     width: 100%;
     line-height: 1;
 }
+
+.image-gallery {
+    height: 500px;
+    position: relative;
+    overflow-x: hidden;
+}
+
 
 @media (max-width: 480px) {
     .home-item > h3 {
@@ -151,4 +179,44 @@ footer{
     .shown {
         display: none;
     }
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9999;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 450px;
+    padding: 10px;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
 }

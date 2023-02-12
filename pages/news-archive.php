@@ -30,15 +30,17 @@ include_once './header.php';
                 $stmt->execute();
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($result as $row) {
-                    $date = date_create($row['news_publish_date']);
-                    $row['news_publish_date'] = date_format($date, 'M-d-Y');
-                    echo '<tr>';
-                    echo '<td>' . $row['news_title'] . '</td>';
-                    echo '<td>' . $row['category_name'] . '</td>';
-                    echo '<td>' . $row['username'] . '</td>';
-                    echo '<td>' . $row['news_publish_date'] . '</td>';
-                    echo '<td><a href="newsarticle.php?id=' . $row['news_id'] . '" style="text-decoration: none">Read more</a></td>';
-                    echo '</tr>';
+                    if ($row['news_published'] == 0) {
+                        $date = date_create($row['news_publish_date']);
+                        $row['news_publish_date'] = date_format($date, 'M-d-Y');
+                        echo '<tr>';
+                        echo '<td>' . $row['news_title'] . '</td>';
+                        echo '<td>' . $row['category_name'] . '</td>';
+                        echo '<td>' . $row['username'] . '</td>';
+                        echo '<td>' . $row['news_publish_date'] . '</td>';
+                        echo '<td><a href="newsarticle.php?id=' . $row['news_id'] . '" style="text-decoration: none">Read more</a></td>';
+                        echo '</tr>';
+                    }
                 }
                 ?>
             </tbody>

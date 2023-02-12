@@ -12,14 +12,15 @@ include '../assets/php/category.php';
     <title>Overload <?php echo $_SESSION['current_page']; ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="../assets/css/countdown.css">
+    <script src="https://kit.fontawesome.com/e66285cb3c.js" crossorigin="anonymous"></script>
+
+
 </head>
 <body style="background-color: black">
-<div class="container d-flex justify-content-center my-3">
+<div class="container d-flex justify-content-center ">
     <a title="Overload" href="./home.php">
-        <img class="logo" src="../assets/images/logo.png" alt="Overload Logo">
+        <img class="logo mb-1" src="../assets/images/logo.png" alt="Overload Logo">
     </a>
 </div>
 <nav class="navbar navbar-dark navbar-expand-lg bg-dark mx-5 mb-4 rounded cnav">
@@ -48,7 +49,7 @@ include '../assets/php/category.php';
                     <a class="nav-link" href="https://discord.com/invite/n8V8tkkp8M">Discord</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../assets/downloads/OverloadHD-1.1-all.jar">Play Now</a>
+                    <a class="nav-link" href="../assets/downloads/Overload.jar">Play Now</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./highscores.php">Highscores</a>

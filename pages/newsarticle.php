@@ -26,29 +26,17 @@ include_once './header.php';
             $category = $row['category_name'];
             $image = $row['news_image'];
             $text = $row['news_body_text'];
-
+            if ($row['news_published'] == 0) {
             echo "<div class='news-article p-3 text-white rounded mb-5'>";
             echo "<p aria-labelledby='News Titel' class='title-bar'><span class='title' style='font-size: 2.5rem'>" . $title . "</span>  <span class='float-end'><span class=''> " . $category . "</span> | " . $author . " | " . $date . "</span></p>";
-            if ($image != null) {
-                echo "<div class='row'>
-                            <div class='col-3'>";
-                echo "<p><img style='width: 250px' src='" . $image . "' alt=''/></div> ";
-                echo "<div class='col' aria-labelledby='News Message'>" . $text . "</p>";
-                echo "</div></div></div>";
-            } else {
-                echo "<p aria-labelledby='News Message'>" . $text . "</p>";
-                echo "</div>";
+            echo "<p aria-labelledby='News Message'>" . $text . "</p>";
+            echo "</div>";
+        } else {
+                echo "<script>window.location.href = 'news.php';</script>";
             }
         }
-
-//            if ($image != null){
-//
-//            }
-//            echo "<img src='$image' alt='' style='height: 250px'/>";
-//            echo "<p>". $text. "</p>";
-//            echo "</div>";
-//            }
     ?>
+    <button onclick="BackFunction()" id="btACP" title="Back to last page">Back</button>
 </div>
 <?php
 include_once './footer.php';

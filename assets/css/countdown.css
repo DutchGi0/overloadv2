@@ -1,0 +1,83 @@
+#countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 10px;
+    text-align: center;
+}
+
+.countdown-item h3,
+.countdown-item h4,
+.countdown-item h5{
+    font-size: 1.5em;
+}
+
+.countdown-item p{
+    font-size: 1em;
+}
+
+#countdown p {
+    margin-bottom: 10px;
+}
+
+.countdown-item {
+    padding: 10px;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+    font-weight: 700;
+    margin-bottom: 0;
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    border: #fff solid 2px;
+    height: 150px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.days {
+    grid-column: 1 / 2;
+}
+
+.countdown-item .hours {
+    grid-column: 2 / 3;
+}
+
+.countdown-item .minutes {
+    grid-column: 3 / 4;
+}
+
+.seconds {
+    grid-column: 4 / 5;
+}
+
+@media screen and (max-width: 768px) {
+    #countdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .countdown-item .days {
+        grid-column: 1 / 2;
+    }
+    .countdown-item .hours {
+        grid-column: 1 / 2;
+    }
+    .countdown-item .minutes {
+        grid-column: 2 / 3;
+    }
+    .countdown-item .seconds {
+        grid-column: 2 / 3;
+    }
+}
+
+h3 .hidden{
+    display: none;
+}
