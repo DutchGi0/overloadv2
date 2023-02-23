@@ -1,7 +1,8 @@
 # overloadv2
 TODO
-- [ ] Homepage
-- [ ] News
-- [x] News Archive
-- [ ] 
-- [ ] Admin CP
+- [x] Homepage
+- [x] News
+- [x] News Archive 
+- [x] Admin CP
+- [ ] FoE Pets page
+- [ ] Donator benefits page
