@@ -5,7 +5,7 @@ require_once '../assets/php/dbconfig.php';
 include_once './header.php';
 ?>
 <div class="container">
-    <div id="carouselExampleInterval" class="carousel slide my-3" data-bs-ride="carousel">
+    <div id="carouselheader" class="carousel slide my-3" data-bs-ride="carousel">
         <div class="carousel-inner text-center">
             <div class="carousel-item active" data-bs-interval="5000">
                 <img src="../assets/images/raids3.png" class="rounded" alt="...">
@@ -21,7 +21,6 @@ include_once './header.php';
     </div>
     <div class="row">
         <div class="col text-white p-2 rounded news ms-3">
-            <!--            TODO: Animate the countdown clock-->
 
             <div class="news-article">
                 <h2 class="text-center">Overload V2 launch!</h2>
@@ -70,8 +69,6 @@ include_once './header.php';
                             echo "</div>";
                             echo "<hr>";
                         }
-                    echo "</div>";
-
                 }
                 ?>
             <h2 class="text-center mb-4">Recent news</h2>
@@ -106,7 +103,7 @@ include_once './header.php';
             ?>
             <span class="float-end home-item"><a class="text-primary" href="news.php" style="text-decoration: none">View all news</a></span>
         </div>
-        <div class="col-4 text-white mt-2 ms-3 me-2 rounded">
+        <div class="col-4 text-white mt-2 ms-3 me-2 rounded events">
             <?php if (isset($_SESSION['role'])) { ?>
                 <div class="home-item">
                     <h3 class="text-center uppercase m-4">Welcome <span
@@ -118,20 +115,31 @@ include_once './header.php';
                 </div>
             <?php } ?>
 
-<!--            <div class="home-item shown embed-responsive">-->
-<!--                           TODO: Placing the correct youtube trailer-->
-<!---->
-<!--                <h3 class="mt-3 text-center"">Trailer-->
-<!--                <div class="m-3 d-flex justify-content-center">-->
-<!--                    <iframe src="https://www.youtube.com/embed/BJhF0L7pfo8"-->
-<!--                            title="YouTube video player"-->
-<!--                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
-<!--                            allowfullscreen></iframe>-->
-<!--                </div>-->
-<!--            </div>-->
+            <div class="news-article giveaway">
+                <h4 class="text-center uppercase">Launch Giveaway</h4>
+                <a target="_blank" href="../assets/images/overloadv2giveaway.png">
+                    <img src="../assets/images/overloadv2giveaway.png" alt="Launch Giveaway" class="img-fluid">
+                </a>
+                <p class="text-center">Click on the image to make it fullscreen.</p>
+
+                <h4 class="text-center uppercase">Guides</h4>
+                <ul style="list-style: none;">
+                    <li><a class="text-info" style="text-decoration: none" href="./donator-benefits.php"><img src="../assets/images/donator.png" alt="donator"/> Donator benefits</a></li>
+                    <li><a class="text-info" style="text-decoration: none" href="./foe-perks.php"><img src="../assets/images/arc_pet.png" alt="arc pet"/> Fire of Exchange pets</a></li>
+                </ul>
+            </div>
+
+            <div class="home-item shown embed-responsive">
+                <h3 class="mt-3 text-center"">Trailer
+                <div class="d-flex justify-content-center">
+                    <video width="320" height="240" controls>
+                        <source src="../assets/video/Overload-Trailer.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                </div>
+            </div>
 
 
-            <div class='home-item'>
+            <div class='home-item events'>
                 <?php
                 $sql = "SELECT * From event WHERE event_date_end >= CURDATE() ORDER BY event_date_start ASC LIMIT 2";
                 $stmt = $pdo->prepare($sql);
@@ -174,7 +182,7 @@ include_once './header.php';
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 
 <script>
-    let countDownDate = new Date("Feb 28, 2023 00:00:00").getTime();
+    let countDownDate = new Date("Feb 27, 2023 00:00:00 EST").getTime();
 
     const tl = new TimelineMax();
 
@@ -204,7 +212,7 @@ include_once './header.php';
 
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("countdown").innerHTML = "EXPIRED";
+            document.getElementById("countdown").innerHTML = "Overload V2 is live, download it now!";
         }
     }, 1000);
 

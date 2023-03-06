@@ -31,6 +31,7 @@ $result = $stmt->execute([
 if ($result) {
     echo '<script>alert("News created successfully")</script>';
     echo '<script>window.location.href = "all-news.php"</script>';
+    $pdo = null;
 } else {
     echo '<script>alert("News creation failed")</script>';
 }

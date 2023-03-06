@@ -94,7 +94,7 @@ body {
     text-shadow: 0 0 10px #15bbdc;
 }
 
-#myBtn{
+#topbtn{
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
     bottom: 50px; /* Place the button at the bottom of the page */
@@ -128,7 +128,7 @@ body {
     font-size: 18px; /* Increase font size */
 }
 
-#myBtn:hover {
+#topbtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
 
@@ -164,6 +164,17 @@ footer{
         display: none;
     }
 
+    .carousel {
+        display: none;
+    }
+
+    .giveaway {
+        display: none;
+    }
+
+    .events {
+        display: none;
+    }
 }
 
 @media (max-width: 770px) {
@@ -177,6 +188,18 @@ footer{
         gap: 1rem;
     }
     .shown {
+        display: none;
+    }
+
+    .carousel {
+        display: none;
+    }
+
+    .giveaway {
+        display: none;
+    }
+
+    .events {
         display: none;
     }
 }

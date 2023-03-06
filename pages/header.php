@@ -13,6 +13,7 @@ include '../assets/php/category.php';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/countdown.css">
+
     <script src="https://kit.fontawesome.com/e66285cb3c.js" crossorigin="anonymous"></script>
 
 
@@ -48,9 +49,24 @@ include '../assets/php/category.php';
                 <li class="nav-item">
                     <a class="nav-link" href="https://discord.com/invite/n8V8tkkp8M">Discord</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../assets/downloads/Overload.jar">Play Now</a>
+                <style>
+                    .dd-play .dropdown-menu {
+                        position: relative;
+                        left: -30px;
+                    }
+                </style>
+                <li class="nav-item dropdown dd-play">
+                    <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Play Now
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../assets/downloads/Overload.jar">Overload V1</a></li>
+                        <li><a class="dropdown-item" href="../assets/downloads/OverloadHD.jar">Overload V2</a></li>
+                    </ul>
                 </li>
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="../assets/downloads/Overload.jar">Play Now</a>-->
+<!--                </li>-->
                 <li class="nav-item">
                     <a class="nav-link" href="./highscores.php">Highscores</a>
                 </li>
@@ -60,20 +76,6 @@ include '../assets/php/category.php';
                 <li class="nav-item">
                     <a class="nav-link" href="./store.php">Store</a>
                 </li>
-<!--                --><?php
-//                if (isset($_SESSION['user'])) {
-//                    echo '<li class="nav-item dropdown">';
-//                    echo '<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-//                        Account
-//                    </a>';
-//                    echo '<ul class="dropdown-menu">';
-//                        echo '<li><a class="dropdown-item" href="#">ACP</a></li>';
-//                        echo '<li><a class="dropdown-item" href="#">Logout</a></li>';
-//                    echo '</ul>';
-//                echo '</li>';;
-//                    }
-//                ?>
-
             </ul>
         </div>
     </div>

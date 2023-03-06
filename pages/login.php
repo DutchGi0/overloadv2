@@ -49,27 +49,3 @@ if (isset($_POST['submit'])) {
 echo "<div class='text-white text-center'>$message</div>";
 include_once './footer.php';
 ?>
-
-<!-- $sql = "SELECT * FROM `giveaway` ORDER BY ABS(giveaway_end_date - CURRENT_TIMESTAMP) LIMIT 1;";
-                $stmt = $pdo->prepare($sql);
-                $stmt->execute();
-                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                if ($result == 0) {
-                if (count($result) > 0) {
-                    foreach ($result as $row) {
-                        $dateStartFromDB = $row['giveaway_start_date'];
-                        $dateEndFromDB = $row['giveaway_end_date'];
-                        $date_start = DateTimeInterface::ATOM;
-                        $date_end = DateTimeInterface::ATOM;
-                        $date_start = date('M-d-Y', strtotime($dateStartFromDB));
-                        $date_end = date('M-d-Y H:i:s', strtotime($dateEndFromDB));
-                        echo "<h2 class='text-center uppercase p-2'><span class='title'>C</span>urrent Giveaway</h2>";
-                        echo " <div class='home-item'>";
-                        echo "<h3 class='text-center title m-4'>" . $row['giveaway_title'] . "</h3>";
-                        echo "<p><strong>Description:</strong> " . $row['giveaway_description'] . "</p>";
-                        echo "<p>From: <span class='date'>" . $date_start . "</span> Till <span class='date'>" . $date_end . "</span></p>";
-                        echo "<a target='_blank' href='https://dyno.gg/giveaway/" . $row['giveaway_link'] . "' class='btn btn-primary'>View</a>";
-                        echo "</div>";
-                    }
-                }
-                }-->
